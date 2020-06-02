@@ -10,7 +10,7 @@ module.exports = (app) => {
         })
     })
 
-    app.get("api/workots/:id", (req, res) => {
+    app.get("api/workouts/:id", (req, res) => {
         Workout.findOne({_id: req.params.id})
         .then(workout => {
             res.json(workout)
